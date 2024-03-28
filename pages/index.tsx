@@ -3,7 +3,6 @@ import styles from "./index.module.scss";
 import cls from "classnames";
 const width = 416;
 const height = 278;
-const element = new Array(4).fill("");
 const gap = 52;
 const moveNum = width + gap;
 export default function Home() {
