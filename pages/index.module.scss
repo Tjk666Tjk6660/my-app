@@ -1,0 +1,82 @@
+.sliderOverflow {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  color: #f2f2f2;
+}
+
+.sliderBtn {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid rgb(130, 130, 130);
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  font-size: 30px;
+  color: white;
+  line-height: 42px;
+  text-align: center;
+  margin-top: -24px;
+  background-color: rgb(3, 3, 3);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(130, 130, 130);
+  }
+}
+
+.hiddenBtn {
+  pointer-events: none;
+  opacity: 0;
+  cursor: alias;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  transition: transform 300ms;
+  & > div {
+    flex-shrink: 0;
+  }
+}
+
+.card {
+  border-radius: 50px;
+
+  &:hover {
+    &:nth-child(1) {
+      background-image: linear-gradient(135deg, #da8aff, #719bff);
+    }
+    &:nth-child(2) {
+      background-image: linear-gradient(135deg, #3cbc34, #d9e313);
+    }
+    &:nth-child(3) {
+      background-image: linear-gradient(135deg, #0891d5, #38c1a5);
+    }
+    &:nth-child(4) {
+      background-image: linear-gradient(135deg, #eb3e1c, #e0ad38);
+    }
+    .cardContent {
+      transform: translate(4px, -4px);
+    }
+  }
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(19, 19, 19);
+  transition: transform 0.15s ease;
+  will-change: transform;
+  border-radius: 50px;
+  padding: 36px 18px 18px 40px;
+  &::before {
+    content: "";
+    width: 46px;
+    display: block;
+    height: 4px;
+    border-radius: 11px;
+    background-color: #38c1a5;
+  }
+}
